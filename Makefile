@@ -1,6 +1,14 @@
+.PHONY: error
+error:
+	exit 1
+
 .PHONY: dev
 dev:
 	go run cmd/ling/main.go
+
+.PHONY: test
+test:
+	go test -v ./...
 
 .PHONY: build
 build:
